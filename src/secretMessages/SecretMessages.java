@@ -13,10 +13,14 @@ public class SecretMessages {
 		String message = scan.nextLine();
 		//this will be the String that we will output to the user after encoding or decoding
 		String output = "";
+		//set the key that will be used for encoder/decoder
+		//we will just add 13 to each character of the message for encoding and subtract for decoding
+		char key = 13;
 		
-		//For right now this for loop will start at the end of the input message and write each char until it reaches the start, so it will reverse the message
-		for (int x = message.length()-1; x>=0 ; x--) {
-			output += message.charAt(x);
+		//For right now this for loop goes through and add the key(13) to each char and converts it to that char
+		//example A will equal N by adding 13
+		for (int x = 0; x < message.length(); x++) {
+			output += (char)(message.charAt(x) + key);
 		}
 		System.out.println(output);
 	}
