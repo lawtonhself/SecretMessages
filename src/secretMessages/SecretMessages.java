@@ -21,6 +21,3 @@ public class SecretMessages {
 		System.out.println(output);
 	}
 }
-//test
-//saSs
-sqSQsQSQ
